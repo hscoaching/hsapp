@@ -228,16 +228,3 @@ a, button, [onclick], label, select, summary{touch-action:manipulation; -webkit-
   .fchip, .coaching-btn{min-height:36px;}
   .fq-gear{min-height:36px;}
 }
-
-/* ===== Ambiances de marque (coach / salle) : html[data-amb="…"] posé par org-style.js =====
-   Variables calculées en JS : police des titres, capitales, arrondi, frise (dans la couleur de la marque). « grec » = thème ci-dessus. */
-html[data-amb]:not([data-amb="grec"]) :is(h1,h2,h3,.display,.brand .b1,.mark,.hero .eyebrow,.eyebrow,.prog-card .eyebrow,.card .cat,.block h4,.stat-num){font-family:var(--amb-title) !important; font-style:var(--amb-fs,normal); font-weight:var(--amb-fw,700); letter-spacing:var(--amb-ls) !important; text-transform:var(--amb-tt);}
-html[data-amb]:not([data-amb="grec"]) :is(.btn,button.btn,a.btn){font-family:var(--amb-title) !important; font-style:var(--amb-fs,normal); font-weight:var(--amb-fw,700); letter-spacing:var(--amb-bls,.06em) !important; text-transform:var(--amb-tt);}
-html[data-amb]:not([data-amb="grec"]) :is(.nav-link,.navrow a,.chip,.subchip,.muscle-tag,.subtab,.day-chip,.fchip,.badge){letter-spacing:var(--amb-bls,.06em); text-transform:var(--amb-tt);}
-html[data-amb]:not([data-amb="grec"]) .card h3{text-transform:var(--amb-tt); letter-spacing:var(--amb-bls,.04em);}
-html[data-amb] :where(*:not([style*="border-radius:50%"]):not([style*="border-radius: 50%"]):not([style*="border-radius:999"]):not(svg):not(svg *)){border-radius:var(--amb-r,2px) !important;}
-html[data-amb] :is(.mark,.nav-dot,.fav-star,.closeBtn,.editBtn,.visit-avatar,.visit-dot,.keep-round,.logo){border-radius:50% !important;}
-html[data-amb] header.top::after,html[data-amb] footer::before{background:var(--amb-frise) !important; height:var(--amb-fh,10px);}
-html[data-amb] body{background:var(--bg);}
-html[data-amb] header.top{background:color-mix(in srgb, var(--bg) 92%, transparent) !important;}
-html[data-amb] .navrow{background:var(--bg) !important;}

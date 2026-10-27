@@ -246,3 +246,30 @@ html[data-amb] .hs-sq{border-radius:0 !important;}
 html[data-amb] .navrow a.active{background:var(--surface-2) !important;}
 html[data-amb-light] :focus-visible{outline-color:var(--accent);}
 .field input,.field select,.field textarea{box-sizing:border-box; max-width:100%;}   /* « Description et dossier » débordait de l'écran une fois ouvert */
+
+/* ===== Ergonomie (check-up du 28/10) ===== */
+/* 1. Barre du bas sur téléphone : 11 px, une icône au-dessus du mot */
+@media(max-width:700px){
+  .navrow a{flex-direction:column !important; gap:3px; font-size:11px !important; letter-spacing:0 !important; text-transform:none !important; font-weight:600 !important; font-family:inherit !important; line-height:1.1 !important;}
+  .navrow a::before{font-size:18px; line-height:1; filter:grayscale(.35); opacity:.85;}
+  .navrow a.active::before{filter:none; opacity:1;}
+  .navrow a[href="index.html"]::before{content:'📚';}
+  .navrow a[href="programmes.html"]::before{content:'📋';}
+  .navrow a[href="seances.html"]::before{content:'🎟';}
+  .navrow a[href="outils.html"]::before{content:'🧰';}
+  .navrow a[href="compte.html"]::before{content:'👤';}
+  .navrow a[href="admin.html"]::before,.navrow a[href="gerant.html"]::before{content:'🏛';}
+}
+/* 2. Bibliothèque sur téléphone : titres lisibles (12 px), 3 cartes par ligne */
+@media(max-width:600px){
+  .pg-home #grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;}
+  .pg-home #grid .card h3{font-size:12px !important; letter-spacing:.01em !important; line-height:1.22 !important;}
+}
+/* 3. Petits boutons : au moins 40 px de haut pour le doigt */
+@media(pointer:coarse),(max-width:700px){
+  .hs-note-add,.printBtn,.hm-x,.rest-chip,.day-chip,.lvl-tab,.todo-chip > button,.bdg-sw{min-height:40px !important;}
+  .hs-note{min-height:40px; align-items:center;}
+  .todo-x{min-width:40px !important; min-height:40px !important;}
+  .cc-link{min-height:36px; padding:6px 4px !important; display:inline-flex !important; align-items:center;}
+  summary span[role="button"]{display:inline-flex; align-items:center; justify-content:center; min-width:40px; min-height:40px; padding:0 10px !important;}
+}

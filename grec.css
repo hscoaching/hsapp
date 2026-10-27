@@ -245,3 +245,4 @@ html[data-amb] :is(h1,h2,h3,h4,p){border-radius:0 !important;}   /* titres coup�
 html[data-amb] .hs-sq{border-radius:0 !important;}
 html[data-amb] .navrow a.active{background:var(--surface-2) !important;}
 html[data-amb-light] :focus-visible{outline-color:var(--accent);}
+.field input,.field select,.field textarea{box-sizing:border-box; max-width:100%;}   /* « Description et dossier » débordait de l'écran une fois ouvert */

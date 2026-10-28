@@ -273,3 +273,13 @@ html[data-amb-light] :focus-visible{outline-color:var(--accent);}
   .cc-link{min-height:36px; padding:6px 4px !important; display:inline-flex !important; align-items:center;}
   summary span[role="button"]{display:inline-flex; align-items:center; justify-content:center; min-width:40px; min-height:40px; padding:0 10px !important;}
 }
+/* Ambiance « Original » : la toute première version (sans frise, pastilles rondes, gros titres) */
+html[data-amb="original"] header.top::after,html[data-amb="original"] footer::before{display:none !important;}
+html[data-amb="original"] header.top{border-bottom:1px solid var(--line) !important;}
+html[data-amb="original"] :is(.chip,.subchip,.fchip,.day-chip,.subtab,.btn,.badge,.muscle-tag,.searchbar,.field input,.field select){border-radius:999px !important;}
+html[data-amb="original"] :is(h1,h2,.hero h1){letter-spacing:-.02em !important;}
+html[data-amb="original"] :is(.eyebrow,.hero .eyebrow,.card .cat){font-family:'Inter','Helvetica Neue',Arial,sans-serif !important; font-weight:800; letter-spacing:.04em !important; text-transform:uppercase;}
+html[data-amb="original"] .mark{border-radius:10px !important;}
+html[data-amb="original"] .navrow a.active{background:var(--accent) !important; color:var(--accent-ink) !important;}
+@media(min-width:701px){html[data-amb="original"] .navrow a{border-radius:999px !important;}}
+@media(max-width:700px){html[data-amb="original"] .navrow a.active{background:var(--surface-2) !important; color:var(--ink) !important;}}

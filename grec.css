@@ -119,7 +119,7 @@ footer::before{margin-bottom:22px;}
   .hs-alert .x{font-size:16px !important;}
   #hsPushBar{margin-top:8px !important;}
   #hsPushBar > div{padding:8px 10px !important; gap:10px !important; font-size:13px !important; border-width:1px !important;}
-  #hsPushBar .hsp-sub{display:none;}
+  #hsPushBar .hsp-sub:not(.hsp-keep){display:none;}
   #hsPushBar span[style*="font-size:22px"]{font-size:18px !important;}
   h1.page{font-size:clamp(25px,7.2vw,31px) !important; line-height:1.05 !important;}
   .pg-admin h1{font-size:25px !important; line-height:1.1 !important;}

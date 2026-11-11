@@ -264,7 +264,7 @@ html[data-amb-light] :focus-visible{outline-color:var(--accent);}
   .navrow a[href="programmes.html"]::before{content:'📋';}
   .navrow a[href="seances.html"]::before{content:'🎟';}
   .navrow a[href="outils.html"]::before{content:'🧰';}
-  .navrow a[href="compte.html"]::before{content:'👤';}
+  .navrow a[href="compte.html"]::before,.navrow a[href^="compte.html#"]::before{content:'📈';}
   .navrow a[href="admin.html"]::before,.navrow a[href="gerant.html"]::before{content:'🏛';}
 }
 /* 2. Bibliothèque sur téléphone : titres lisibles (12 px), 3 cartes par ligne */
